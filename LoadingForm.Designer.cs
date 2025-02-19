@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace WinBoostPro
@@ -55,6 +54,7 @@ namespace WinBoostPro
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.progressBarLoading);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -72,6 +72,6 @@ namespace WinBoostPro
 
         private System.Windows.Forms.ProgressBar progressBarLoading;
         private System.Windows.Forms.Label label2;
-        private Label label1;
+        private System.Windows.Forms.Label label1;
     }
 }

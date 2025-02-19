@@ -3,18 +3,18 @@ using System.Windows.Forms;
 
 namespace WinBoostPro
 {
-    public partial class WelcomeForm : Form // <- Ici, il était déjà "public"
+    public partial class WelcomeForm : Form
     {
-        private Timer fadeInTimer;
+        private readonly Timer fadeInTimer;
 
         public WelcomeForm()
         {
             InitializeComponent();
-            this.Opacity = 0; // Début transparent
+            this.Opacity = 0;
 
             fadeInTimer = new Timer
             {
-                Interval = 30 // Vitesse du fade-in
+                Interval = 30
             };
             fadeInTimer.Tick += FadeInEffect;
             fadeInTimer.Start();
@@ -24,7 +24,7 @@ namespace WinBoostPro
         {
             if (this.Opacity < 1)
             {
-                this.Opacity += 0.05; // Augmente l'opacité progressivement
+                this.Opacity += 0.05;
             }
             else
             {
@@ -32,32 +32,10 @@ namespace WinBoostPro
             }
         }
 
-        private void WinBoost_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void Professional_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void Label1_Click(object sender, EventArgs e)
-        {
-        }
-
         private void BoutonCommencer_Click(object sender, EventArgs e)
         {
-            this.Hide(); // Masque la fenêtre actuelle
-            TermsForm cguForm = new TermsForm(); // Crée une instance de CGUForm
-            cguForm.Show(); // Affiche la deuxième fenêtre
-        }
-
-        private void WelcomeForm_Load(object sender, EventArgs e)
-        {
-        }
-
-        private void WouldYouLikeToCreate_Click(object sender, EventArgs e)
-        {
-
+            this.Hide();
+            new TermsForm().Show();
         }
     }
 }

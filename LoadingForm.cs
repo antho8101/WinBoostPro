@@ -10,6 +10,7 @@ namespace WinBoostPro
     {
         private static readonly string NotionApiKey = "ntn_X873034169457Og2yNeAXKzhOIthrdhdLYrwExhxd1eanS";
         private static readonly string DatabaseId = "1852085e-713e-80de-ae1c-d615c0fcce72";
+        private static bool isSuccessFormOpen = false; // ✅ Empêche d'afficher SuccessForm deux fois
 
         public LoadingForm()
         {
@@ -41,12 +42,18 @@ namespace WinBoostPro
 
                     this.Invoke((MethodInvoker)delegate
                     {
-                        this.Hide();
-                        SuccessForm successForm = new SuccessForm();
-                        successForm.StartPosition = FormStartPosition.CenterScreen;
-                        successForm.TopMost = true;  // ✅ Pour éviter que la fenêtre soit cachée
-                        successForm.Show();
-                        Console.WriteLine("✅ SuccessForm affiché !");
+                        if (!isSuccessFormOpen) // ✅ Vérifie si SuccessForm n'est pas déjà ouverte
+                        {
+                            isSuccessFormOpen = true;
+                            this.Hide();
+                            SuccessForm successForm = new SuccessForm
+                            {
+                                StartPosition = FormStartPosition.CenterScreen,
+                                TopMost = true
+                            };
+                            successForm.Show();
+                            Console.WriteLine("✅ SuccessForm affiché !");
+                        }
                     });
                 }
                 else
@@ -153,19 +160,7 @@ namespace WinBoostPro
                     progressBarLoading.Value = progressBarLoading.Maximum;
                 });
 
-                await Task.Delay(500); // Pause pour lisibilité avant le changement d'écran
-
-                // **Passage automatique à SuccessForm**
-                this.Invoke((MethodInvoker)delegate
-                {
-                    Console.WriteLine("🎯 Passage à SuccessForm...");
-                    this.Hide();
-                    SuccessForm successForm = new SuccessForm();
-                    successForm.StartPosition = FormStartPosition.CenterScreen;
-                    successForm.TopMost = true;
-                    successForm.Show();
-                    Console.WriteLine("✅ SuccessForm affiché !");
-                });
+                await Task.Delay(500);
             }
             catch (Exception ex)
             {

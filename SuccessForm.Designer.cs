@@ -35,7 +35,6 @@ namespace WinBoostPro
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SuccessForm));
             this.TranksForBoosting = new System.Windows.Forms.Label();
             this.TipRestart = new System.Windows.Forms.Label();
-            this.CreateBackupPoint = new System.Windows.Forms.Button();
             this.DocSupport = new System.Windows.Forms.Label();
             this.Feedback = new System.Windows.Forms.Label();
             this.Conseil1 = new System.Windows.Forms.Label();
@@ -44,6 +43,8 @@ namespace WinBoostPro
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.Restart = new System.Windows.Forms.Button();
+            this.RestartLater = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // TranksForBoosting
@@ -57,16 +58,6 @@ namespace WinBoostPro
             resources.ApplyResources(this.TipRestart, "TipRestart");
             this.TipRestart.BackColor = System.Drawing.Color.Transparent;
             this.TipRestart.Name = "TipRestart";
-            // 
-            // CreateBackupPoint
-            // 
-            this.CreateBackupPoint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(161)))), ((int)(((byte)(255)))));
-            this.CreateBackupPoint.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.CreateBackupPoint, "CreateBackupPoint");
-            this.CreateBackupPoint.ForeColor = System.Drawing.Color.Transparent;
-            this.CreateBackupPoint.Name = "CreateBackupPoint";
-            this.CreateBackupPoint.UseVisualStyleBackColor = false;
-            this.CreateBackupPoint.Click += new System.EventHandler(this.CloseButton_Click);
             // 
             // DocSupport
             // 
@@ -126,12 +117,33 @@ namespace WinBoostPro
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.TabStop = true;
             // 
+            // Restart
+            // 
+            this.Restart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(161)))), ((int)(((byte)(255)))));
+            this.Restart.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.Restart, "Restart");
+            this.Restart.ForeColor = System.Drawing.Color.Transparent;
+            this.Restart.Name = "Restart";
+            this.Restart.UseVisualStyleBackColor = false;
+            this.Restart.Click += new System.EventHandler(this.RestartButton_Click);
+            // 
+            // RestartLater
+            // 
+            resources.ApplyResources(this.RestartLater, "RestartLater");
+            this.RestartLater.BackColor = System.Drawing.Color.Transparent;
+            this.RestartLater.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
+            this.RestartLater.Name = "RestartLater";
+            this.RestartLater.TabStop = true;
+            this.RestartLater.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.RestartLater_LinkClicked);
+            // 
             // SuccessForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ControlBox = false;
+            this.Controls.Add(this.RestartLater);
+            this.Controls.Add(this.Restart);
             this.Controls.Add(this.linkLabel3);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkLabel1);
@@ -140,7 +152,6 @@ namespace WinBoostPro
             this.Controls.Add(this.Conseil1);
             this.Controls.Add(this.Feedback);
             this.Controls.Add(this.DocSupport);
-            this.Controls.Add(this.CreateBackupPoint);
             this.Controls.Add(this.TipRestart);
             this.Controls.Add(this.TranksForBoosting);
             this.DoubleBuffered = true;
@@ -155,6 +166,11 @@ namespace WinBoostPro
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void RestartLater_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         private void CloseButton_Click(object sender, EventArgs e)
@@ -199,7 +215,6 @@ namespace WinBoostPro
 
         private System.Windows.Forms.Label TranksForBoosting;
         private System.Windows.Forms.Label TipRestart;
-        private System.Windows.Forms.Button CreateBackupPoint;
         private System.Windows.Forms.Label DocSupport;
         private System.Windows.Forms.Label Feedback;
         private System.Windows.Forms.Label Conseil1;
@@ -208,5 +223,7 @@ namespace WinBoostPro
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel3;
+        private Button Restart;
+        private LinkLabel RestartLater;
     }
 }

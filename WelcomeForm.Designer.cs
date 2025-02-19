@@ -1,10 +1,9 @@
-﻿namespace WinBoostPro
+﻿using System;
+
+namespace WinBoostPro
 {
-    public partial class WelcomeForm // <- Ajout de "public" ici !
+    public partial class WelcomeForm
     {
-        /// <summary>
-        /// Variable nécessaire au concepteur.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         protected override void Dispose(bool disposing)
@@ -66,7 +65,6 @@
             this.WouldYouLikeToCreate.BackColor = System.Drawing.Color.Transparent;
             this.WouldYouLikeToCreate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
             this.WouldYouLikeToCreate.Name = "WouldYouLikeToCreate";
-            this.WouldYouLikeToCreate.Click += new System.EventHandler(this.WouldYouLikeToCreate_Click);
             // 
             // WelcomeForm
             // 
@@ -86,10 +84,8 @@
             this.ShowIcon = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.TopMost = true;
-            this.Load += new System.EventHandler(this.WelcomeForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion

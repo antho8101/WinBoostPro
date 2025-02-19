@@ -123,10 +123,13 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="progressBarLoading.Location" type="System.Drawing.Point, System.Drawing">
-    <value>146, 300</value>
+    <value>195, 386</value>
+  </data>
+  <data name="progressBarLoading.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="progressBarLoading.Size" type="System.Drawing.Size, System.Drawing">
-    <value>719, 14</value>
+    <value>959, 18</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="progressBarLoading.TabIndex" type="System.Int32, mscorlib">
@@ -151,10 +154,13 @@
     <value>Nunito Black, 15pt, style=Bold</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>305, 226</value>
+    <value>407, 291</value>
+  </data>
+  <data name="label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>400, 28</value>
+    <value>496, 34</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -181,10 +187,13 @@
     <value>Nunito, 8.25pt</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>430, 255</value>
+    <value>573, 328</value>
+  </data>
+  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 15</value>
+    <value>188, 19</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -208,12 +217,12 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 14</value>
+    <value>8, 18</value>
   </data>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA/IAAAIcCAYAAABVW5V+AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EAAACxABrSO9dQAAIQZJREFUeF7t3e2SlUWWhuE5/zMbRQYbEKsRB5iIAWlBmRPYs1dghYpZH7mgsdbz
+        DwAACw8BkvkDpQAAIQZJREFUeF7t3e2SlUWWhuE5/zMbRQYbEKsRB5iIAWlBmRPYs1dghYpZH7mgsdbz
         Xj+uPzQWZtIRO2/zY//Hf/7v6QQAAABp/uf/Mgl5AAAAIq0iOIGQBwAAINIqghMIeQAAACKtIjiBkAcA
         ACDSKoITCHkAAAAirSI4gZAHAAAg0iqCEwh5AAAAIq0iOIGQBwAAINIqghMIeQAAACKtIjiBkAcAACDS
         KoITCHkAAAAirSI4gZAHAAAg0iqCEwh5AAAAIq0iOIGQBwAAINIqghMIeQAAACKtIjiBkAcAACDSKoIT
@@ -357,11 +366,17 @@
         eYqQn+B0+n+WUaKuf9Xh9AAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1010, 540</value>
+    <value>1347, 694</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Nunito, 7.799999pt</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

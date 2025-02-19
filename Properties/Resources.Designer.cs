@@ -8,6 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.Drawing;
+
 namespace WinBoostPro.Properties
 {
 
@@ -33,6 +35,8 @@ namespace WinBoostPro.Properties
         internal Resources()
         {
         }
+
+        public static Icon WinBoostPro { get; internal set; }
 
         /// <summary>
         ///   Retourne l'instance ResourceManager mise en cache utilisée par cette classe.
